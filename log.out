@@ -1,0 +1,55 @@
+ae 0 1
+le 0 1 "cap: 16 cost:58"
+ae 0 3
+le 0 3 "cap: 13 cost:40"
+ae 1 2
+le 1 2 "cap: 5 cost:46"
+ae 1 4
+le 1 4 "cap: 10 cost:45"
+ae 2 3
+le 2 3 "cap: 5 cost:58"
+ae 2 4
+le 2 4 "cap: 8 cost:33"
+ae 3 2
+le 3 2 "cap: 10 cost:60"
+ae 3 5
+le 3 5 "cap: 15 cost:46"
+ae 4 6
+le 4 6 "cap: 25 cost:72"
+ae 5 6
+le 5 6 "cap: 6 cost:68"
+ln 0 "Source"
+ln 6 "Sink"
+ns
+he 4 6
+le 4 6 "cap: 15 cost: 72"
+he 1 4
+le 1 4 "cap: 0 cost: 45"
+he 0 1
+le 0 1 "cap: 6 cost: 58"
+ns
+he 5 6
+le 5 6 "cap: 0 cost: 68"
+he 3 5
+le 3 5 "cap: 9 cost: 46"
+he 0 3
+le 0 3 "cap: 7 cost: 40"
+ns
+he 4 6
+le 4 6 "cap: 10 cost: 72"
+he 2 4
+le 2 4 "cap: 3 cost: 33"
+he 1 2
+le 1 2 "cap: 0 cost: 46"
+he 0 1
+le 0 1 "cap: 1 cost: 58"
+ns
+he 4 6
+le 4 6 "cap: 7 cost: 72"
+he 2 4
+le 2 4 "cap: 0 cost: 33"
+he 3 2
+le 3 2 "cap: 7 cost: 60"
+he 0 3
+le 0 3 "cap: 4 cost: 40"
+ns
