@@ -44,5 +44,5 @@ void max_flow_min_cost(std::string &path)
 int main()
 {
     std::string filename {"data/data2.in"};
-    maximum_flow(filename);
+    minimum_cut(filename);
 }

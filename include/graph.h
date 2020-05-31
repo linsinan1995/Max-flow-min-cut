@@ -390,7 +390,7 @@ std::vector<Graph::Edge> Graph::minimum_cut(const ResidualGraph &residual_graph)
 
     for (auto [src, sink] : cuts)
     {
-        std::cout << "cut: " << src+1 << "->" << sink+1 << "\n";
+        std::cout << "cut: " << src << "->" << sink << "\n";
     }
     return cuts;
 }
@@ -435,7 +435,8 @@ int Graph::min_cost_flow()
             int arc_index = path[u];
             pathCost += residual_cost_graph[arc_index].cost;
             pathFlow = std::min(pathFlow,
-                                residual_cost_graph[arc_index].capacity - residual_cost_graph[arc_index].flow);
+                                residual_cost_graph[arc_index].capacity - 
+                                residual_cost_graph[arc_index].flow);
         }
 
         for (int u = sinkNode; u != sourceNode; u = residual_cost_graph[path[u]].from) {
