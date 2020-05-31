@@ -52,13 +52,22 @@ g++ -DGRAPHVIZ -std=c++17 main.cpp -o test
 
 - Don't support self-loop and redundant edges(multiple arc between s and t) cases.
 
-- Node index should be 0 to numVertices, if not => `cat data.txt | python3 preprocess.py > newdata.txt`
+- Node index should be 0 to numVertices-1, if not => use
+
+```
+cat data.txt | python preprocess.py > newdata.txt
+```
+
+to generate a new data file.
 
 # 3. Usage and Demo
 
 ## 3.1.Maximum flow
 
 ```cpp
+#include "include/graph.h"
+using namespace mcmf;
+
 int main()
 {
     Graph graph = Graph().build(path);
@@ -155,11 +164,15 @@ graph.min_cost_flow();
 graph.toGraphViz("log.out");
 ```
 
-- third, run python code to generate gif picture
+- third, inistall GraphvizAnim, and run python code to generate gif picture
+
+```
+pip install GraphvizAnim
+```
 
 e.g.
 ```
-python3 -m gvanim log.out maximum_flow
+python -m gvanim log.out maximum_flow
 ```
 
 # 5.Algorithm
