@@ -47,11 +47,13 @@ generate GraphViz scripts
 
 ```
 g++ -std=c++17 main.cpp -o test
+./test
 ```
 
 Don't generate GraphViz scripts
 ```
 g++ -DGRAPHVIZ -std=c++17 main.cpp -o test
+./test
 ```
 
 
