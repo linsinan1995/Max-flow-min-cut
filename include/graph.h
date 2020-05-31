@@ -98,8 +98,8 @@ namespace mcmf {
             addEdge(emanatingNode, terminatingNode, maxCapacity, cost);
         }
     #ifdef GRAPHVIZ
-        addLog(Action::addNodeText, {std::to_string(sourceNode), "Source"});
-        addLog(Action::addNodeText, {std::to_string(sinkNode), "Sink"});
+        addLog(Action::addNodeText, {std::to_string(sourceNode), "Source " + std::to_string(sourceNode)});
+        addLog(Action::addNodeText, {std::to_string(sinkNode), "Sink" + std::to_string(sinkNode)});
         logUpdate();
     #endif
         return *this;

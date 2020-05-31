@@ -10,6 +10,7 @@
 */
 #include "include/graph.h"
 
+using namespace mcmf;
 using std::cout;
 
 void maximum_flow(std::string &path)
@@ -43,6 +44,8 @@ void max_flow_min_cost(std::string &path)
 
 int main()
 {
-    std::string filename {"data/data2.in"};
-    minimum_cut(filename);
+    // if node is from 1 to nVertices => run cat data.txt | python preprocess.py > newdata.txt
+    // to preprocess it first
+    std::string filename {"data/data.in"};
+    max_flow_min_cost(filename);
 }
