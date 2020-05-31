@@ -10,13 +10,13 @@
 --> 
 # MCMF algorithm with C++ 17
 
-This project includes three algorithm:
+This project is for my course of Operations Research in Unice, and it includes three algorithm:
 
-1.Maximum flow 
+- Maximum flow
 
-2.Minimum cut
+- Minimum cut
 
-3.Min cost max flow
+- Min cost max flow
 
 Beyond the printed result, I also add a module to generate GraphViz-parsable scripts to generate an animated GIF.
 
@@ -32,8 +32,7 @@ make
 ./test
 ```
 
-If you don't want to generate GraphViz scripts, comment out `add_definitions( -DGRAPHVIZ )` in CMakeLists.txt,
-which takes an amount of time.
+If you don't want to generate GraphViz scripts(save an amount of time), comment out `add_definitions( -DGRAPHVIZ )` in CMakeLists.txt.
 
 ## 1.2.GCC
 
@@ -216,6 +215,6 @@ cost(v->u) = -1*cost;
     total cost += f * minimum_cost
     ```
 
-4. Return maximum flow and minimun cost when no available path can be found.
+4. Return maximum flow and minimum cost when no available path can be found.
 
 
