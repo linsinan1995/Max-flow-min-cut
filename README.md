@@ -34,6 +34,13 @@ make
 
 If you don't want to generate GraphViz scripts(save an amount of time), comment out `add_definitions( -DGRAPHVIZ )` in CMakeLists.txt.
 
+and remember to modify data path.
+
+e.g.
+```
+// std::string filename {"data/data.in"};
+std::string filename {"../data/data.in"};
+```
 ## 1.2.GCC
 
 generate GraphViz scripts
@@ -177,7 +184,7 @@ python -m gvanim log.out maximum_flow
 
 # 5.Algorithm
 
-# 5.1.Maximum flow
+## 5.1.Maximum flow
 
 1. Set `total flow` as 0 in the beginning.
 
@@ -196,7 +203,7 @@ python -m gvanim log.out maximum_flow
         ```
 3. Return flow when no available path can be found.
 
-# 5.2.Minimum cut
+## 5.2.Minimum cut
 
 1. Run maximum flow algorithm, and get the final residual graph.
 
@@ -204,7 +211,7 @@ python -m gvanim log.out maximum_flow
 
 3. Edges can be minimum cut if their source node is non-reachable node, and sink node is reachable.
 
-# 5.3.Min cost max flow
+## 5.3.Min cost max flow
 
 
 1. Initialize `total cost` and `total flow` as 0.

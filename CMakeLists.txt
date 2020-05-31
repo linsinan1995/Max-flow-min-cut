@@ -5,7 +5,7 @@ project(Graph)
 
 
 # Option
-SET(CMAKE_CXX_COMPILER g++-8)
+SET(CMAKE_CXX_COMPILER g++)
 add_definitions( -DGRAPHVIZ )
 set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_FLAGS_DEBUG " -O0 -Wall -g -ggdb")
